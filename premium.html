@@ -2,17 +2,113 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Premium Services | Torasogh</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <style>
-    body { margin:0; background:#111; color:white; font-family:'Poppins',sans-serif; text-align:center; padding: 50px;}
-    h1 { color: #ff4e00; }
-    a { color: #ff7e00; text-decoration: none; display:inline-block; margin-top:20px; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1a0a0a, #0d0d0d);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background: linear-gradient(45deg, #ff4e00, #ff7e00);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: white;
+    }
+    nav a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .content {
+      padding: 50px 20px;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+    .content h2 {
+      font-size: 2.5rem;
+      background: linear-gradient(45deg, #ff4e00, #ff7e00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 15px;
+    }
+    .content p {
+      font-size: 1.1rem;
+      color: #ccc;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+    .cta-button {
+      display: inline-block;
+      background: linear-gradient(45deg, #ff4e00, #ff7e00);
+      color: white;
+      padding: 15px 30px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 10px rgba(255, 126, 0, 0.5);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(255, 126, 0, 0.9);
+    }
+    .footer {
+      text-align: center;
+      padding: 15px;
+      background: #111;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
   </style>
 </head>
 <body>
-  <h1>🚀 Premium Services for Free</h1>
-  <p>Exciting free services will be listed here soon!</p>
-  <a href="index.html">⬅️ Go Back</a>
+
+  <header>
+    <h1>Torasogh</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="tools.html">Tools</a>
+      <a href="#credits">Credits</a>
+    </nav>
+  </header>
+
+  <div class="content">
+    <h2>🎨 Canva Pro for Free*</h2>
+    <p>
+      Unlock your creativity with **Canva Pro features** without spending a cent! Design posters, social media graphics, presentations, videos, and more with premium assets and templates.
+    </p>
+    <p>We provide access through educational accounts or trial tricks that you can use legally for fun and learning purposes.</p>
+    <a href="#" class="cta-button">🚀 Claim Access (Coming Soon)</a>
+
+    <div id="credits" style="margin-top:40px;">
+      <h3 style="color:#ff7e00;">Credits & Disclaimer</h3>
+      <p style="color:#aaa; font-size:0.95rem;">
+        This is a fun placeholder demo by <strong>Torasogh</strong>. We respect <b>Canva</b> and recommend subscribing officially for long-term use.<br>
+        This section may contain learning resources or trial methods in the future.
+      </p>
+    </div>
+  </div>
+
+  <div class="footer">© 2025 Torasogh | Fun Tools for Creativity</div>
+
 </body>
 </html>
