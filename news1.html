@@ -69,9 +69,115 @@
       margin-bottom: 16px;
       display: inline-block;
     }
+
+    /* Comments Section */
+    .comments-section {
+      margin-top: 48px;
+      padding: 32px 0 0 0;
+      border-top: 1.5px solid #f2dede;
+    }
+    .comments-title {
+      color: #d32f2f;
+      font-size: 1.18rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+    .comment-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 26px;
+      background: #fafbfc;
+      padding: 20px 16px 14px 16px;
+      border-radius: 8px;
+      box-shadow: 0 1px 8px #d32f2f09;
+    }
+    .comment-form input,
+    .comment-form textarea {
+      font-family: 'Poppins', Arial, sans-serif;
+      font-size: 1.03rem;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      outline: none;
+      transition: border-color .18s;
+      resize: none;
+    }
+    .comment-form input:focus,
+    .comment-form textarea:focus {
+      border-color: #d32f2f;
+    }
+    .comment-form button {
+      align-self: flex-end;
+      background: #d32f2f;
+      color: #fff;
+      font-weight: 600;
+      border: none;
+      border-radius: 5px;
+      padding: 8px 16px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background .15s;
+    }
+    .comment-form button:hover {
+      background: #fd5f41;
+    }
+    .comments-list {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+    .comment-card {
+      background: #fafbfc;
+      border-radius: 7px;
+      box-shadow: 0 1.5px 8px #d32f2f09;
+      padding: 12px 16px 14px 16px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      border-left: 4px solid #d32f2f;
+    }
+    .comment-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #ffe5e5;
+      color: #d32f2f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.09rem;
+      flex-shrink: 0;
+    }
+    .comment-content {
+      flex: 1;
+    }
+    .comment-author {
+      font-weight: 700;
+      color: #d32f2f;
+      font-size: 1rem;
+      margin-bottom: 2px;
+    }
+    .comment-date {
+      color: #aaa;
+      font-size: 0.91rem;
+      margin-bottom: 4px;
+    }
+    .comment-text {
+      color: #333;
+      font-size: 1.05rem;
+      line-height: 1.5;
+    }
     @media (max-width:600px){
       .news-article-container {padding:14vw 4vw;}
       .news-title {font-size:1.3rem;}
+      .comments-section {padding:18px 0 0 0;}
+      .comment-form {padding:10px 3vw;}
+      .comment-card {padding:10px 4vw;}
     }
   </style>
 </head>
@@ -84,56 +190,7 @@
     <div class="news-body">
       <div class="news-highlight">Torasogh launches its next-gen AI suite for creators and developers!</div>
       <p>
-       🚨 No Credit Card. No Trial. Just Tools.
-Torasogh has redefined access again — this time giving users legit, full access to Canva Pro at no cost. Dubbed the “Bingo Tingo Protocol,” this in-house flow is blowing up across social media, creator forums, and digital workspaces. Unlike shady hacks or cracked versions, Torasogh’s system is completely legal, API-integrated, and smooth as butter.
-
-“I thought it was a scam at first,” laughs Rumi A., a Bangladeshi freelancer. “But it worked. I now have all premium Canva features — and I didn’t pay a single taka.”
-
-🔁 How It Works: The Flow Explained
-Let’s break it down for newcomers:
-
-🔘 Click the “Bingo Tingo” Button: Found in the Premium Tools section of Torasogh.com.
-
-⏲️ Timer Starts (30 seconds): Behind the scenes, the system runs encrypted API calls.
-
-🖱️ User Clicks 3 Times After Timer: It verifies you’re a real user.
-
-🔁 Redirect to Internal Tool — “Bizimu”: This is Torasogh’s middleware platform.
-
-🎯 3 More Clicks to Activate Canva Pro: You’re in. Fully enabled. Export, brand kits, templates — everything.
-
-🔍 What Is "Bizimu"?
-Bizimu is Torasogh’s internal automation flow engine — imagine a secure AI assistant fused with developer workflows. It orchestrates tool access by creating sandbox environments where premium services like Canva Pro can legally operate through partnerships and educational grants.
-
-It’s not stealing — it’s smart routing.
-
-🧑‍💻 Real Use Cases
-🏫 Students: Design project presentations with premium fonts and assets.
-
-👩‍🎨 Designers: Export transparent PNGs, resize posts in one click, access templates.
-
-🧑‍💼 Startup Teams: Brand kits, social campaigns, and pitch decks — done free.
-
-⚖️ Is It Legal?
-Yes. Torasogh has structured this feature through:
-
-⚙️ Non-commercial educational APIs
-
-🤝 Global creative partnerships
-
-🛡️ Dynamic session validation
-
-It’s transparent, accountable, and hosted on secure cloud services.
-
-💬 What Users Are Saying
-“It feels like I unlocked a cheat code for productivity.”
-— Salim J., Digital Marketer
-
-“If you’re not using Torasogh, you’re working 10x harder than you need to.”
-— Maya A., Content Creator
-
-🔔 What’s Next?
-The team hints that Figma Pro, Notion AI, and MidJourney access might be coming soon through similar flows. Torasogh is building a future where premium tools are not locked behind paywalls, but unlocked by curiosity and creativity.
+        We are excited to announce the release of our latest set of AI tools, designed to automate content creation and code generation. With these powerful new features, your creative and development workflow becomes seamless, intelligent, and significantly more productive.
       </p>
       <p>
         <strong>Key Benefits:</strong>
@@ -151,6 +208,79 @@ The team hints that Figma Pro, Notion AI, and MidJourney access might be coming 
         <strong>Try them out today and experience the future of smart automation with Torasogh!</strong>
       </p>
     </div>
+
+    <!-- Comments Section -->
+    <section class="comments-section">
+      <div class="comments-title">
+        <svg width="20" height="20" fill="none"><path d="M2 17.5V4.5A2.5 2.5 0 0 1 4.5 2h11A2.5 2.5 0 0 1 18 4.5v7A2.5 2.5 0 0 1 15.5 14H6l-3 3.5z" stroke="#d32f2f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Comments
+      </div>
+      <form class="comment-form" id="commentForm" autocomplete="off">
+        <input type="text" id="commentName" placeholder="Your name" maxlength="25" required />
+        <textarea id="commentText" placeholder="Write a comment..." rows="3" maxlength="400" required></textarea>
+        <button type="submit">Post Comment</button>
+      </form>
+      <div class="comments-list" id="commentsList">
+        <!-- Comments will appear here -->
+      </div>
+    </section>
   </div>
+  <script>
+    // Simple localStorage-based comment system (persists for each article)
+    const form = document.getElementById('commentForm');
+    const nameInput = document.getElementById('commentName');
+    const textInput = document.getElementById('commentText');
+    const commentsList = document.getElementById('commentsList');
+    const STORAGE_KEY = 'news1_comments';
+
+    function randomAvatarColor(name) {
+      // Pick color by first char for a bit of variety
+      const colors = ['#ffe5e5', '#e0f7fa', '#ffe082', '#e1bee7', '#ffecb3', '#b2dfdb'];
+      if (!name) return colors[0];
+      return colors[name.charCodeAt(0) % colors.length];
+    }
+
+    function renderComments() {
+      const comments = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+      commentsList.innerHTML = '';
+      if(comments.length === 0) {
+        commentsList.innerHTML = `<div style="color:#999;font-size:1rem;text-align:center;">No comments yet. Be the first!</div>`;
+        return;
+      }
+      for(const c of comments) {
+        const initials = c.name.trim().split(' ').map(w => w[0]).join('').toUpperCase().slice(0,2) || '?';
+        commentsList.innerHTML += `
+          <div class="comment-card">
+            <div class="comment-avatar" style="background:${randomAvatarColor(c.name)};">${initials}</div>
+            <div class="comment-content">
+              <div class="comment-author">${c.name}</div>
+              <div class="comment-date">${c.date}</div>
+              <div class="comment-text">${c.text.replace(/</g,"&lt;").replace(/>/g,"&gt;")}</div>
+            </div>
+          </div>
+        `;
+      }
+    }
+
+    function getNowDate() {
+      const d = new Date();
+      return d.toLocaleString(undefined, {year:'numeric', month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'});
+    }
+
+    form.onsubmit = function(e){
+      e.preventDefault();
+      const name = nameInput.value.trim() || 'Anonymous';
+      const text = textInput.value.trim();
+      if(!text) return;
+      let comments = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+      comments.push({ name, text, date: getNowDate() });
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(comments));
+      nameInput.value = '';
+      textInput.value = '';
+      renderComments();
+    };
+    // Render on load
+    renderComments();
+  </script>
 </body>
 </html>
