@@ -95,11 +95,14 @@
       text-decoration: none;
       display: flex;
       flex-direction: column;
+       color: inherit;           /* Keeps text color same as surrounding text */
+  text-decoration: none;    /* Removes underline */
     }
 
     a.card:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 18px rgba(255, 126, 0, 0.8);
+       text-decoration: none;    
     }
 
     a.card img {
