@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8" />
-  <title>Torasogh Multi-Tools</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/figlet/1.5.2/figlet.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech & Dev News | Torasogh</title>
+  <meta name="description" content="Read latest tech & developer news at Torasogh. Explore AI trends, creative tools, and digital breakthroughs.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <style>
-   body {
+    body {
       margin: 0;
       padding: 0;
       font-family: 'Poppins', sans-serif;
@@ -39,473 +38,162 @@
     nav a:hover {
       text-decoration: underline;
     }
-}
-    body {
-      background: #1a0a0a;
-      color: white;
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 20px;
-      min-height: 100vh;
-    }
-    h1 {
+    .hero {
+      padding: 60px 20px;
       text-align: center;
-      margin-bottom: 30px;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
       background: linear-gradient(45deg, #ff4e00, #ff7e00);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      font-weight: 900;
-      user-select: none;
-      font-size: 3rem;
+      margin-bottom: 15px;
     }
-    .tool-box {
-      background: linear-gradient(135deg, #000000, #66615c);
-      box-shadow: 0 4px 10px rgba(255, 126, 0, 0.6);
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 30px;
-      transition: box-shadow 0.3s ease;
-      color: white;
-    }
-    .tool-box:hover {
-      box-shadow: 0 8px 20px rgba(255, 126, 0, 0.9);
-    }
-    button {
-      background: linear-gradient(45deg, #ff7e00, #ff4e00);
-      color: white;
-      border: none;
-      padding: 12px 22px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: 700;
+    .hero p {
+      color: #ccc;
       font-size: 1.1rem;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-      box-shadow: 0 3px 8px rgba(255, 126, 0, 0.8);
-      user-select: none;
+      margin-bottom: 35px;
     }
-    button:hover {
-      background: linear-gradient(45deg, #ff4e00, #ff7e00);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 15px rgba(255, 126, 0, 1);
+
+    .news-section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
     }
-    input, textarea, select {
-      background: #330a00;
-      border: 1px solid #ff7e00;
-      border-radius: 8px;
-      color: white;
-      padding: 10px;
-      font-family: 'Poppins', sans-serif;
-      font-size: 1rem;
+
+    .news-section h3 {
+      text-align: center;
+      color: #ff7e00;
+      font-size: 2rem;
+      margin-bottom: 25px;
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .news-card {
+      background: #1a1a1a;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(255, 126, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .news-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .news-card img {
       width: 100%;
-      margin: 6px 0 12px;
-      box-sizing: border-box;
-      resize: vertical;
-      caret-color: #ff7e00;
+      height: 170px;
+      object-fit: cover;
     }
-    pre {
-      background: #3e1300;
+
+    .news-card h4 {
       padding: 15px;
-      border-radius: 8px;
-      overflow-x: auto;
-      white-space: pre-wrap;
-      word-break: break-word;
-      font-family: monospace;
-      color: #ffe7c4;
-      max-height: 300px;
+      margin: 0;
+      font-size: 1.2rem;
+      color: #ff7e00;
     }
-    label {
-      font-weight: 700;
+
+    .news-card p {
+      padding: 0 15px;
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+
+    .news-card a {
       display: block;
-      margin-top: 10px;
-      color: #ffb86c;
+      padding: 15px;
+      text-align: right;
+      text-decoration: none;
+      color: #ff7e00;
+      font-weight: bold;
+      background: #111;
+      border-top: 1px solid #222;
+    }
+    .news-card a:hover {
+      text-decoration: underline;
+    }
+
+    .about, .instructions {
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .about h3, .instructions h3 {
+      color: #ff7e00;
+      margin-bottom: 10px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 15px;
+      background: #111;
+      font-size: 0.9rem;
+      color: #aaa;
+      margin-top: auto;
     }
   </style>
 </head>
 <body>
 
-  <h1>Torasogh Multi-Tools</h1>
+  <header>
+    <h1>Torasogh</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#instructions">Guide</a>
+      <a href="#menu">News</a>
+    </nav>
+  </header>
 
-  <!-- 1. Fancy ASCII Generator -->
-  <div class="tool-box" id="tool-ascii">
-    <h2>Fancy ASCII Text Generator</h2>
-    <input type="text" id="ascii-input" placeholder="Enter text here..." />
-    <button onclick="generateAscii()">Generate ASCII Art</button>
-    <pre id="ascii-output">Result will appear here...</pre>
+  <div class="hero">
+    <h2>Tech News, AI Trends & Creative Automation</h2>
+    <p>Stay informed with the latest in AI tools, creative software, and digital revolutions. All served fresh from Torasogh.</p>
   </div>
 
-  <!-- 2. PNG to PDF Converter -->
-  <div class="tool-box" id="tool-pngpdf">
-    <h2>PNG to PDF Converter</h2>
-    <input type="file" id="png-file" accept="image/png" />
-    <button onclick="convertPngToPdf()">Convert to PDF</button>
-  </div>
+  <section class="news-section" id="menu">
+    <h3>📰 Latest News</h3>
+    <div class="news-grid">
+      <div class="news-card">
+        <img src="news1.jpg" alt="News 1">
+        <h4>Canva Pro Tools Now Open Source</h4>
+        <p>Explore how free design tools are taking over the industry. Designers love the flexibility and freedom!</p>
+        <a href="news1.html">Read More →</a>
+      </div>
+      <div class="news-card">
+        <img src="news2.jpg" alt="News 2">
+        <h4>AI Tools Changing Developer Workflow</h4>
+        <p>From smart code generators to test automation, AI is becoming the backbone of modern dev operations.</p>
+        <a href="news2.html">Read More →</a>
+      </div>
+      <div class="news-card">
+        <img src="news3.jpg" alt="News 3">
+        <h4>Torasogh to Launch Its Own AI OS</h4>
+        <p>Rumors say Torasogh is working on a revolutionary operating system for AI-native computing. Here's what we know.</p>
+        <a href="news3.html">Read More →</a>
+      </div>
+    </div>
+  </section>
 
-  <!-- 3. Torasogh Secret Message Generator -->
-  <div class="tool-box" id="tool-secretmsg">
-    <h2>Torasogh Secret Message Generator</h2>
-    <textarea id="secret-input" rows="4" placeholder="Enter message here..."></textarea>
-    <button onclick="generateSecretMessage()">Generate Secret Code</button>
-    <pre id="secret-output"></pre>
-  </div>
+  <section class="about" id="about">
+    <h3>About Torasogh</h3>
+    <p>Torasogh is a creative ecosystem for online tools, developer resources, and now—breaking news in tech and automation. We believe in open knowledge, bold innovation, and giving users the freedom to explore, build, and stay informed without limits.</p>
+  </section>
 
-  <!-- 4. Word Document to PDF (basic) -->
-  <div class="tool-box" id="tool-wordpdf">
-    <h2>Word Document to PDF (Basic)</h2>
-    <input type="file" id="docx-file" accept=".doc,.docx" />
-    <button onclick="convertDocToPdf()">Convert to PDF (simple text only)</button>
-    <pre id="docx-output"></pre>
-  </div>
+  <section class="instructions" id="instructions">
+    <h3>How to Use</h3>
+    <ul style="line-height: 1.7;">
+      <li>➡ Click any <b>News Card</b> to read the full article on a dedicated page.</li>
+      <li>➡ Check back daily for fresh stories curated for creators and coders.</li>
+      <li>➡ Join our mailing list soon for direct delivery of breakthroughs.</li>
+    </ul>
+  </section>
 
-  <!-- 5. Github Template Generator -->
-  <div class="tool-box" id="tool-github">
-    <h2>Github README Template Generator</h2>
-    <input type="text" id="github-project" placeholder="Project Name" />
-    <textarea id="github-description" rows="3" placeholder="Project Description"></textarea>
-    <button onclick="generateGithubTemplate()">Generate README</button>
-    <pre id="github-output"></pre>
-  </div>
-
-  <!-- 6. Facebook BIO Generator -->
-  <div class="tool-box" id="tool-facebookbio">
-    <h2>Facebook BIO Generator</h2>
-    <button onclick="generateFacebookBio()">Generate Random Bio</button>
-    <pre id="facebookbio-output"></pre>
-  </div>
-
-  <!-- 7. Website Security Check (Fake) -->
-  <div class="tool-box" id="tool-securecheck">
-    <h2>Website Security Check </h2>
-    <input type="url" id="secure-url" placeholder="Enter website URL" />
-    <button onclick="fakeWebsiteSecurityCheck()">Check Security</button>
-    <pre id="securecheck-output"></pre>
-  </div>
-   <!-- secret decoder -->>
-    <div class="tool-box" id="tool-secret-message">
-  <h2>Secret Message Encoder / Decoder</h2>
-  <label for="secret-message-input">Message:</label>
-  <textarea id="secret-message-input" rows="3" placeholder="Type your message here..."></textarea>
-
-  <label for="secret-message-shift">Shift (1-25):</label>
-  <input type="number" id="secret-message-shift" min="1" max="25" value="3" />
-
-  <div style="margin: 15px 0;">
-    <button onclick="encodeSecretMessage()">Encode</button>
-    <button onclick="decodeSecretMessage()">Decode</button>
-  </div>
-
-  <label for="secret-message-output">Result:</label>
-  <textarea id="secret-message-output" rows="4" readonly placeholder="Result will appear here..."></textarea>
-</div>
-
-  <!-- 8. Python to Kotlin Generator (Basic placeholder) -->
-  <div class="tool-box" id="tool-pytokotlin">
-    <h2>Python to Kotlin Code Converter (Basic)</h2>
-    <textarea id="python-code" rows="6" placeholder="Enter Python code..."></textarea>
-    <button onclick="pythonToKotlin()">Convert</button>
-    <pre id="kotlin-output"></pre>
-  </div>
-
-  <!-- 9. Kotlin to Java Converter (Basic placeholder) -->
-  <div class="tool-box" id="tool-ktoj">
-    <h2>Kotlin to Java Code Converter (Basic)</h2>
-    <textarea id="kotlin-code" rows="6" placeholder="Enter Kotlin code..."></textarea>
-    <button onclick="kotlinToJava()">Convert</button>
-    <pre id="java-output"></pre>
-  </div>
-
-  <!-- 10. Photo to ASCII Generator -->
-  <div class="tool-box" id="tool-photoascii">
-    <h2>Photo to ASCII Generator</h2>
-    <input type="file" id="photo-file" accept="image/*" />
-    <button onclick="photoToAscii()">Generate ASCII from Photo</button>
-    <pre id="photoascii-output"></pre>
-  </div>
-
-<script>
-  // secret 3encode 
-  function caesarShift(str, amount) {
-  if (amount < 0) return caesarShift(str, amount + 26);
-
-  let output = '';
-
-  for (let i = 0; i < str.length; i++) {
-    let c = str[i];
-    if (c.match(/[a-z]/i)) {
-      let code = str.charCodeAt(i);
-
-      // Uppercase letters
-      if (code >= 65 && code <= 90) {
-        c = String.fromCharCode(((code - 65 + amount) % 26) + 65);
-      }
-      // Lowercase letters
-      else if (code >= 97 && code <= 122) {
-        c = String.fromCharCode(((code - 97 + amount) % 26) + 97);
-      }
-    }
-    output += c;
-  }
-
-  return output;
-}
-
-function encodeSecretMessage() {
-  const msg = document.getElementById('secret-message-input').value;
-  const shift = parseInt(document.getElementById('secret-message-shift').value, 10);
-  if (!msg) {
-    alert('Please enter a message to encode.');
-    return;
-  }
-  if (isNaN(shift) || shift < 1 || shift > 25) {
-    alert('Shift must be between 1 and 25.');
-    return;
-  }
-  const encoded = caesarShift(msg, shift);
-  document.getElementById('secret-message-output').value = encoded;
-}
-
-function decodeSecretMessage() {
-  const msg = document.getElementById('secret-message-input').value;
-  const shift = parseInt(document.getElementById('secret-message-shift').value, 10);
-  if (!msg) {
-    alert('Please enter a message to decode.');
-    return;
-  }
-  if (isNaN(shift) || shift < 1 || shift > 25) {
-    alert('Shift must be between 1 and 25.');
-    return;
-  }
-  const decoded = caesarShift(msg, 26 - shift);
-  document.getElementById('secret-message-output').value = decoded;
-}
-
-  // 1. Fancy ASCII Generator
-  function generateAscii() {
-    const text = document.getElementById('ascii-input').value.trim();
-    const output = document.getElementById('ascii-output');
-    if (!text) {
-      output.textContent = 'Enter some text.';
-      return;
-    }
-    if (typeof figlet === 'undefined') {
-      output.textContent = 'Figlet.js library not loaded.';
-      return;
-    }
-    figlet.text(text, {
-      font: 'Standard',
-      horizontalLayout: 'default',
-      verticalLayout: 'default'
-    }, (err, data) => {
-      if (err) {
-        output.textContent = 'Error generating ASCII art.';
-        console.error(err);
-      } else {
-        output.textContent = data;
-      }
-    });
-  }
-
-  // 2. PNG to PDF Converter
-  async function convertPngToPdf() {
-    const fileInput = document.getElementById('png-file');
-    if (!fileInput.files.length) {
-      alert('Please select a PNG image.');
-      return;
-    }
-    const file = fileInput.files[0];
-    if (file.type !== 'image/png') {
-      alert('Only PNG images allowed.');
-      return;
-    }
-    const img = new Image();
-    const url = URL.createObjectURL(file);
-    img.src = url;
-    img.onload = async () => {
-      const { jsPDF } = window.jspdf;
-      const pdf = new jsPDF();
-      const imgProps = pdf.getImageProperties(img);
-      const pdfWidth = pdf.internal.pageSize.getWidth();
-      const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-      pdf.addImage(img, 'PNG', 0, 0, pdfWidth, pdfHeight);
-      pdf.save('image.pdf');
-      URL.revokeObjectURL(url);
-    };
-  }
-
-  // 3. Torasogh Secret Message Generator (simple Caesar cipher)
-  function generateSecretMessage() {
-    const input = document.getElementById('secret-input').value;
-    const output = document.getElementById('secret-output');
-    if (!input.trim()) {
-      output.textContent = 'Enter a message.';
-      return;
-    }
-    // simple shift cipher +3
-    const encrypted = input.split('').map(c => {
-      let code = c.charCodeAt(0);
-      if (code >= 65 && code <= 90) return String.fromCharCode(((code - 65 + 3) % 26) + 65);
-      if (code >= 97 && code <= 122) return String.fromCharCode(((code - 97 + 3) % 26) + 97);
-      return c;
-    }).join('');
-    output.textContent = encrypted;
-  }
-
-  // 4. Word Document to PDF (basic text extraction only)
-  function convertDocToPdf() {
-    const input = document.getElementById('docx-file');
-    const output = document.getElementById('docx-output');
-    if (!input.files.length) {
-      output.textContent = 'Select a Word document file.';
-      return;
-    }
-    // Note: parsing docx fully on frontend is complex
-    // Here just say not supported (placeholder)
-    output.textContent = 'Sorry, Word to PDF conversion is not supported in this demo.';
-  }
-
-  // 5. Github README Template Generator
-  function generateGithubTemplate() {
-    const name = document.getElementById('github-project').value.trim();
-    const desc = document.getElementById('github-description').value.trim();
-    const output = document.getElementById('github-output');
-    if (!name) {
-      output.textContent = 'Enter project name.';
-      return;
-    }
-    const template =
-`# ${name}
-
-${desc || 'Project description goes here.'}
-
-## Installation
-
-\`\`\`bash
-npm install
-\`\`\`
-
-## Usage
-
-\`\`\`bash
-npm start
-\`\`\`
-
-## License
-
-MIT License
-`;
-    output.textContent = template;
-  }
-
-  // 6. Facebook BIO Generator (random fun bios)
-  const bios = [
-    "Living my best life 🌟",
-    "Coffee lover ☕ and tech geek 💻",
-    "Dream big, hustle harder.",
-    "Travel. Eat. Code. Repeat.",
-    "Just a human being with a story.",
-    "Creating magic one line of code at a time.",
-    "Here to inspire and be inspired.",
-  ];
-  function generateFacebookBio() {
-    const output = document.getElementById('facebookbio-output');
-    const randomBio = bios[Math.floor(Math.random() * bios.length)];
-    output.textContent = randomBio;
-  }
-
-  // 7. Website Security Check (Fake demo)
-  function fakeWebsiteSecurityCheck() {
-    const url = document.getElementById('secure-url').value.trim();
-    const output = document.getElementById('securecheck-output');
-    if (!url) {
-      output.textContent = 'Enter a website URL.';
-      return;
-    }
-    // Fake random results
-    const results = [
-      'No vulnerabilities found. Site looks safe! ✅',
-      'Warning: SSL certificate expired! ⚠️',
-      'Site is using outdated CMS version. 🚨',
-      'No issues detected in last scan. ✅',
-      'Possible XSS vulnerability detected. ⚠️',
-      'Site uses HTTPS with strong ciphers. ✅',
-    ];
-    const randomResult = results[Math.floor(Math.random() * results.length)];
-    output.textContent = `Security scan result for ${url}:\n\n${randomResult}`;
-  }
-
-  // 8. Python to Kotlin Generator (basic placeholder)
-  function pythonToKotlin() {
-    const pythonCode = document.getElementById('python-code').value.trim();
-    const output = document.getElementById('kotlin-output');
-    if (!pythonCode) {
-      output.textContent = 'Enter Python code.';
-      return;
-    }
-    // Placeholder: just wraps python code in Kotlin style comment
-    output.textContent = `// Kotlin equivalent (demo):\n/*\n${pythonCode}\n*/\n\n// TODO: Implement actual translation`;
-  }
-
-  // 9. Kotlin to Java Converter (basic placeholder)
-  function kotlinToJava() {
-    const kotlinCode = document.getElementById('kotlin-code').value.trim();
-    const output = document.getElementById('java-output');
-    if (!kotlinCode) {
-      output.textContent = 'Enter Kotlin code.';
-      return;
-    }
-    // Placeholder: just wraps kotlin code in Java style comment
-    output.textContent = `// Java equivalent (demo):\n/*\n${kotlinCode}\n*/\n\n// TODO: Implement actual translation`;
-  }
-
-  // 10. Photo to ASCII Generator (simple, uses canvas)
-  function photoToAscii() {
-    const fileInput = document.getElementById('photo-file');
-    const output = document.getElementById('photoascii-output');
-    if (!fileInput.files.length) {
-      output.textContent = 'Please select an image file.';
-      return;
-    }
-    const file = fileInput.files[0];
-    const reader = new FileReader();
-    reader.onload = function(e) {
-      const img = new Image();
-      img.onload = () => {
-        const canvas = document.createElement('canvas');
-        const ctx = canvas.getContext('2d');
-
-        // Scale image down to max 100 width for performance
-        const maxWidth = 100;
-        let scale = 1;
-        if (img.width > maxWidth) scale = maxWidth / img.width;
-        canvas.width = img.width * scale;
-        canvas.height = img.height * scale;
-
-        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-        const pixels = imageData.data;
-
-        const chars = ['@', '#', 'S', '%', '?', '*', '+', ';', ':', ',', '.'];
-        let ascii = '';
-
-        for (let y = 0; y < canvas.height; y += 2) { // skip every other row for aspect ratio
-          for (let x = 0; x < canvas.width; x++) {
-            const idx = (y * canvas.width + x) * 4;
-            const r = pixels[idx];
-            const g = pixels[idx + 1];
-            const b = pixels[idx + 2];
-            // Calculate brightness
-            const brightness = (0.299*r + 0.587*g + 0.114*b)/255;
-            const charIndex = Math.floor((1 - brightness) * (chars.length - 1));
-            ascii += chars[charIndex];
-          }
-          ascii += '\n';
-        }
-        output.textContent = ascii;
-      };
-      img.src = e.target.result;
-    };
-    reader.readAsDataURL(file);
-  }
-</script>
+  <div class="footer">© 2025 Torasogh | News for the Bold. Made with ❤️</div>
 
 </body>
 </html>
