@@ -4,46 +4,104 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>New AI Tools Released | Torasogh News</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"/>
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #0d0d0d;
-      color: #f5f5f5;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
+      font-family: 'Poppins', Arial, sans-serif;
+      background: #fafbfc;
+      color: #222;
+      margin: 0;
+      padding: 0;
     }
-    a {
-      color: #ff7e00;
+    .news-article-container {
+      max-width: 750px;
+      background: #fff;
+      margin: 40px auto 20px auto;
+      box-shadow: 0 4px 24px #0001;
+      border-radius: 14px;
+      padding: 36px 28px 32px 28px;
+    }
+    .news-back-link {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: #d32f2f;
       text-decoration: none;
       font-weight: bold;
+      font-size: 1.09rem;
+      transition: color .15s;
     }
-    a:hover {
+    .news-back-link:hover {
+      color: #fd5f41;
       text-decoration: underline;
     }
-    header {
-      margin-bottom: 30px;
+    .news-title {
+      color: #d32f2f;
+      font-size: 2.2rem;
+      margin: 0 0 5px 0;
+      font-weight: 700;
+      line-height: 1.18;
     }
-    h1 {
-      font-size: 2rem;
-      color: #ff7e00;
+    .news-date {
+      color: #888;
+      font-size: 1.01rem;
+      margin-bottom: 26px;
+      display: block;
     }
-    p {
-      line-height: 1.6;
-      font-size: 1.1rem;
+    .news-image {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 7px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 10px #d32f2f14;
+    }
+    .news-body {
+      font-size: 1.13rem;
+      color: #333;
+      line-height: 1.7;
+    }
+    .news-highlight {
+      background: #ffe5e5;
+      color: #d32f2f;
+      padding: 7px 12px;
+      border-radius: 6px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      display: inline-block;
+    }
+    @media (max-width:600px){
+      .news-article-container {padding:14vw 4vw;}
+      .news-title {font-size:1.3rem;}
     }
   </style>
 </head>
 <body>
-  <header>
-    <a href="index.html">← Back to News</a>
-  </header>
-  <article>
-    <h1>New AI Tools Released</h1>
-    <p><em>Published: June 16, 2025</em></p>
-    <p>Our latest AI tools help automate content creation and code generation, making your workflow seamless and more productive.</p>
-    <p>Integrate effortlessly with existing projects and enjoy continuous updates to keep you at the cutting edge of technology.</p>
-    <p>Try them out today and accelerate your development process with Torasogh AI innovations!</p>
-  </article>
+  <div class="news-article-container">
+    <a href="index.html" class="news-back-link">&larr; Back to News</a>
+    <h1 class="news-title">New AI Tools Released</h1>
+    <span class="news-date">Published: June 16, 2025</span>
+    <img src="Screenshot 2025-06-16 184140.png" alt="New AI Tools Released" class="news-image" />
+    <div class="news-body">
+      <div class="news-highlight">Torasogh launches its next-gen AI suite for creators and developers!</div>
+      <p>
+        We are excited to announce the release of our latest set of AI tools, designed to automate content creation and code generation. With these powerful new features, your creative and development workflow becomes seamless, intelligent, and significantly more productive.
+      </p>
+      <p>
+        <strong>Key Benefits:</strong>
+        <ul>
+          <li>Effortless integration with your existing projects</li>
+          <li>Automated content and code generation</li>
+          <li>Continuous updates and improvements</li>
+          <li>User-friendly interface with robust documentation</li>
+        </ul>
+      </p>
+      <p>
+        Whether you're a developer looking to speed up your coding process or a creator aiming to produce content at scale, Torasogh AI tools have got you covered. Stay ahead of the curve and maximize your productivity with our innovative solutions.
+      </p>
+      <p>
+        <strong>Try them out today and experience the future of smart automation with Torasogh!</strong>
+      </p>
+    </div>
+  </div>
 </body>
 </html>
