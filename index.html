@@ -3,460 +3,519 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Torasogh | Creative Tools, AI & News</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <title>Torasogh News | Creative Tools, AI & Tech Updates</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"/>
   <style>
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #0d0d0d;<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Torasogh | Creative Tools, AI & News</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #0d0d0d;
-      color: #f5f5f5;
+      font-family: 'Poppins', Arial, sans-serif;
+      background: #fafbfc;
+      color: #202124;
+      min-height: 100vh;
     }
-    /* Modern Top Bar */
-    header {
-      background: #111;
-      padding: 20px 40px;
+    .header {
+      background: #fff;
+      border-bottom: 3px solid #d32f2f;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      border-bottom: 2px solid #ff7e00;
+      justify-content: space-between;
+      padding: 0 32px;
+      height: 62px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
-    header h1 {
-      margin: 0;
-      font-size: 1.8rem;
-      color: #ff7e00;
-    }
-    nav a {
-      margin-left: 25px;
-      text-decoration: none;
-      color: #f5f5f5;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #ff7e00;
-    }
-
-    .section {
-      padding: 50px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-    .section h2 {
-      color: #ff7e00;
-      text-align: center;
+    .header .logo {
       font-size: 2rem;
-      margin-bottom: 30px;
+      font-weight: bold;
+      color: #d32f2f;
+      letter-spacing: 2px;
     }
-
-    .hero {
+    .header nav a {
+      text-decoration: none;
+      color: #222;
+      font-weight: 600;
+      margin-left: 28px;
+      font-size: 1.08rem;
+      transition: color 0.2s, border-bottom .18s;
+      padding-bottom: 3px;
+      border-bottom: 2px solid transparent;
+    }
+    .header nav a:hover, .header nav a.active {
+      color: #d32f2f;
+      border-bottom: 2px solid #d32f2f;
+    }
+    .breaking {
+      background: #d32f2f;
+      color: #fff;
+      padding: 9px 0;
+      font-weight: bold;
+      font-size: 1rem;
+      letter-spacing: 1px;
       text-align: center;
-      padding: 60px 20px 20px;
     }
-    .hero h2 {
-      font-size: 2.5rem;
-      background: linear-gradient(45deg, #ff4e00, #ff7e00);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 15px;
+    .hero {
+      background: #fff;
+      text-align: center;
+      padding: 35px 10px 18px 10px;
+      border-bottom: 1px solid #ececec;
+    }
+    .hero h1 {
+      color: #d32f2f;
+      font-size: 2.3rem;
+      margin: 0 0 9px 0;
+      font-weight: 700;
     }
     .hero p {
-      font-size: 1.1rem;
-      color: #ccc;
-      max-width: 700px;
-      margin: auto;
+      color: #444;
+      font-size: 1.09rem;
+      margin: 0 auto;
+      max-width: 600px;
     }
-
-    .card-grid {
+    .section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 30px 16px 0 16px;
+    }
+    .section-title {
+      font-size: 1.47rem;
+      font-weight: 700;
+      border-left: 5px solid #d32f2f;
+      padding-left: 13px;
+      margin-bottom: 20px;
+      color: #d32f2f;
+      background: #fff;
+    }
+    .news-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-      margin-top: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 22px;
     }
-
-    a.card {
-      background: #1a1a1a;
-      border-radius: 12px;
+    .news-card {
+      background: #fff;
+      border-radius: 7px;
+      box-shadow: 0 2px 10px #0001;
       overflow: hidden;
-      box-shadow: 0 4px 10px rgba(255, 126, 0, 0.15);
-      transition: transform 0.3s;
-      color: inherit;
-      text-decoration: none;
+      transition: box-shadow .16s, transform .16s;
       display: flex;
       flex-direction: column;
-       color: inherit;           /* Keeps text color same as surrounding text */
-  text-decoration: none;    /* Removes underline */
+      text-decoration: none;
+      color: inherit;
     }
-
-    a.card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 18px rgba(255, 126, 0, 0.8);
-       text-decoration: none;    
+    .news-card:hover {
+      box-shadow: 0 8px 22px #d32f2f30;
+      transform: translateY(-3px);
     }
-
-    a.card img {
+    .news-card img {
       width: 100%;
       height: 160px;
       object-fit: cover;
+      background: #ececec;
+    }
+    .news-card-content {
+      padding: 17px 15px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .news-card-title {
+      color: #d32f2f;
+      font-size: 1.13rem;
+      font-weight: 700;
+      margin-bottom: 7px;
+      line-height: 1.28;
+    }
+    .news-card-desc {
+      color: #333;
+      font-size: 1.01rem;
+      margin-bottom: 10px;
+      flex: 1;
+    }
+    .news-card-date {
+      font-size: .94rem;
+      color: #888;
+      margin-bottom: 0;
+    }
+    /* Modernized Contributors & About Section */
+    .lower-sections-wrapper {
+      background: linear-gradient(135deg, #fff 50%, #f8f4f2 100%);
+      margin-top: 55px;
+      padding: 0 0 40px 0;
+    }
+    .contrib-about-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: center;
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 40px 2vw 0 2vw;
+    }
+    .contributors-modern {
+      flex: 1 1 320px;
+      background: #fff;
+      box-shadow: 0 2px 10px #2221;
+      border-radius: 14px;
+      padding: 26px 20px 18px 20px;
+      min-width: 270px;
+      max-width: 360px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 18px;
+    }
+    .contributors-modern .section-title {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      border: none;
+      padding: 0;
+      color: #d32f2f;
+      background: none;
+    }
+    .contrib-list-modern {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+    }
+    .contributor-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      padding: 9px 0;
+      border-left: 4px solid #d32f2f;
+      background: #fafbfc;
+      border-radius: 7px;
+      box-shadow: 0 1.5px 8px #d32f2f12;
+      padding-left: 12px;
+    }
+    .contributor-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #ffe5e5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.18rem;
+      color: #d32f2f;
+      font-weight: bold;
       flex-shrink: 0;
     }
-
-    a.card h3 {
-      padding: 15px 15px 5px;
+    .contributor-info {
+      flex: 1;
+    }
+    .contributor-info h4 {
+      margin: 0 0 4px 0;
+      font-size: 1.08rem;
+      color: #d32f2f;
+      font-weight: 700;
+    }
+    .contributor-info p {
       margin: 0;
-      font-size: 1.2rem;
-      color: #ff7e00;
+      color: #555;
+      font-size: 0.97rem;
     }
-
-    a.card p {
-      padding: 0 15px 15px;
-      color: #ccc;
-      font-size: 0.95rem;
-      flex-grow: 1;
-    }
-
-    /* Contributors simple cards */
-    .contrib-card {
-      background: #222;
-      border-left: 4px solid #ff7e00;
-      padding: 15px 20px;
-      margin-bottom: 15px;
-      border-radius: 8px;
-    }
-    .contrib-card h4 {
-      margin: 0;
-      font-size: 1.1rem;
-      color: #ff7e00;
-    }
-    .contrib-card p {
-      margin: 5px 0 0;
-      color: #bbb;
-      font-size: 0.95rem;
-    }
-
-    .footer {
-      text-align: center;
-      padding: 20px;
-      background: #111;
-      color: #aaa;
-      margin-top: 40px;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Redesigned Top Bar -->
-  <header>
-    <h1>Torasogh</h1>
-    <nav>
-      <a href="#news">News</a>
-      <a href="#ai">AI Help</a>
-      <a href="#contributors">Contributors</a>
-      <a href="#about">About</a>
-    </nav>
-  </header>
-
-  <!-- Hero Section -->
-  <div class="hero">
-    <h2>Welcome to Torasogh</h2>
-    <p>Free tools, AI-powered help, automation support, and breaking tech news — all on one creative platform.</p>
-  </div>
-
-  <!-- News Section (replaces Tools) -->
-  <section class="section" id="news">
-    <h2>📰 Latest Tech News</h2>
-    <div class="card-grid">
-      <a href="news1.html" class="card">
-        <img src="Screenshot 2025-06-16 184140.png" />
-        <h3>New AI Tools Released</h3>
-        <p>Our new AI tools help automate content and code generation effortlessly.</p>
-      </a>
-      <a href="news2.html" class="card">
-        <img src="https://placehold.co/600x400/orange/000?text=News+2" alt="News 2" />
-        <h3>Premium Tools Now Free</h3>
-        <p>Torasogh’s premium dev utilities are now available to all users.</p>
-      </a>
-      <a href="news3.html" class="card">
-        <img src="https://placehold.co/600x400/orange/000?text=News+3" alt="News 3" />
-        <h3>Canva Pro Access Unlocked</h3>
-        <p>Explore unlimited design access and resources through our latest rollout.</p>
-      </a>
-    </div>
-  </section>
-
-  <!-- AI Help Section -->
-  <section class="section" id="ai">
-    <h2>🤖 Need Help? Use Torasogh AI</h2>
-    <p style="text-align:center; color:#ccc;">Our AI Assistant can guide you through coding, setup, tech support, and more — built directly into this platform.</p>
-    <div class="card-grid">
-      <div class="card">
-        <h3 style="padding: 20px;">💬 Chat with AI</h3>
-        <p style="padding: 0 20px 20px;">Use Torasogh's built-in assistant for real-time help and smart suggestions.</p>
-      </div>
-      <div class="card">
-        <h3 style="padding: 20px;">📖 Learn How It Works</h3>
-        <p style="padding: 0 20px 20px;">Get guides and examples to make the most of your tools with automation.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contributors Section -->
-  <section class="section" id="contributors">
-    <h2>👥 Contributors</h2>
-    <div class="contrib-card">
-      <h4>Taha N.</h4>
-      <p>Founder & CEO – Tech visionary, architect of Torasogh's innovation roadmap.</p>
-    </div>
-    <div class="contrib-card">
-      <h4>AI Systems Team</h4>
-      <p>Designing the backbone of all intelligent assistance across Torasogh services.</p>
-    </div>
-    <div class="contrib-card">
-      <h4>Frontend & UX Creators</h4>
-      <p>Shaping the look and feel of Torasogh to deliver a premium user experience.</p>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section class="section" id="about">
-    <h2>🌟 About Torasogh</h2>
-    <p style="text-align:center; max-width:700px; margin:auto; color:#ccc;">
-      Torasogh is a future-ready platform offering productivity tools, developer automation, and secure access to premium software experiences. Built to empower creators, engineers, and dreamers everywhere.
-    </p>
-  </section>
-
-  <div class="footer">
-    &copy; 2025 Torasogh — Made for the builders of tomorrow.
-  </div>
-
-</body>
-</html>
-
-      color: #f5f5f5;
-    }
-    /* Modern Top Bar */
-    header {
-      background: #111;
-      padding: 20px 40px;
+    .about-modern {
+      flex: 2 1 340px;
+      background: #fff;
+      box-shadow: 0 2px 10px #2221;
+      border-radius: 14px;
+      padding: 26px 24px 20px 24px;
+      min-width: 270px;
+      max-width: 540px;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 2px solid #ff7e00;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      margin-top: 0;
     }
-    header h1 {
-      margin: 0;
-      font-size: 1.8rem;
-      color: #ff7e00;
-    }
-    nav a {
-      margin-left: 25px;
-      text-decoration: none;
-      color: #f5f5f5;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #ff7e00;
-    }
-
-    .section {
-      padding: 50px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-    .section h2 {
-      color: #ff7e00;
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 30px;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 60px 20px 20px;
-    }
-    .hero h2 {
-      font-size: 2.5rem;
-      background: linear-gradient(45deg, #ff4e00, #ff7e00);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 15px;
-    }
-    .hero p {
-      font-size: 1.1rem;
-      color: #ccc;
-      max-width: 700px;
-      margin: auto;
-    }
-
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-      margin-top: 20px;
-    }
-
-    .card {
-      background: #1a1a1a;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(255, 126, 0, 0.15);
-      transition: transform 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-    }
-
-    .card h3 {
-      padding: 15px 15px 5px;
-      margin: 0;
+    .about-modern .section-title {
       font-size: 1.2rem;
-      color: #ff7e00;
+      margin-bottom: 10px;
+      border: none;
+      padding: 0;
+      color: #d32f2f;
+      background: none;
     }
-
-    .card p {
-      padding: 0 15px 15px;
-      color: #ccc;
-      font-size: 0.95rem;
+    .about-modern p {
+      color: #444;
+      font-size: 1.06rem;
+      margin: 0 0 18px 0;
+      line-height: 1.7;
     }
-
-    /* Contributors simple cards */
-    .contrib-card {
-      background: #222;
-      border-left: 4px solid #ff7e00;
-      padding: 15px 20px;
-      margin-bottom: 15px;
-      border-radius: 8px;
+    /* Floating AI Help Button */
+    .ai-help-btn {
+      position: fixed;
+      bottom: 26px;
+      right: 28px;
+      z-index: 100;
+      width: 58px;
+      height: 58px;
+      background: linear-gradient(135deg,#fd5f41 55%, #d32f2f 100%);
+      border-radius: 50%;
+      box-shadow: 0 6px 18px #d32f2f44;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: none;
+      transition: box-shadow .18s, background .21s;
     }
-    .contrib-card h4 {
-      margin: 0;
-      font-size: 1.1rem;
-      color: #ff7e00;
+    .ai-help-btn:hover {
+      box-shadow: 0 10px 28px #d32f2f60;
+      background: linear-gradient(135deg,#d32f2f 0%, #fd5f41 90%);
     }
-    .contrib-card p {
-      margin: 5px 0 0;
-      color: #bbb;
-      font-size: 0.95rem;
+    .ai-help-btn svg {
+      width: 30px; height: 30px;
+      color: #fff;
     }
-
+    /* AI Chat Modal */
+    .ai-chat-modal {
+      display: none;
+      position: fixed;
+      bottom: 95px;
+      right: 32px;
+      width: 340px;
+      max-width: 95vw;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 8px 40px #2224;
+      z-index: 101;
+      transition: opacity .2s;
+      padding: 0;
+      overflow: hidden;
+      border: 1.5px solid #d32f2f55;
+    }
+    .ai-chat-modal.open {
+      display: block;
+      animation: aiModalIn .2s;
+    }
+    @keyframes aiModalIn {
+      0% { opacity: 0; transform: translateY(40px);}
+      100% { opacity: 1; transform: translateY(0);}
+    }
+    .ai-chat-header {
+      background: linear-gradient(90deg,#d32f2f 60%, #fd5f41 100%);
+      color: #fff;
+      padding: 13px 20px;
+      font-weight: bold;
+      letter-spacing: 0.6px;
+      font-size: 1.07rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .ai-chat-header .close-btn {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.3rem;
+      cursor: pointer;
+      padding: 0;
+    }
+    .ai-chat-body {
+      padding: 20px 16px 18px 16px;
+      font-size: 1rem;
+      color: #222;
+      min-height: 80px;
+    }
+    .ai-chat-input-area {
+      border-top: 1px solid #ececec;
+      padding: 10px 14px;
+      background: #fafbfc;
+      display: flex;
+      gap: 6px;
+    }
+    .ai-chat-input-area input {
+      flex: 1;
+      border: 1px solid #d32f2f44;
+      border-radius: 6px;
+      font-size: 1rem;
+      padding: 8px 10px;
+      outline: none;
+      transition: border .16s;
+    }
+    .ai-chat-input-area input:focus {
+      border: 1.5px solid #d32f2f;
+    }
+    .ai-chat-input-area button {
+      background: #d32f2f;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .17s;
+    }
+    .ai-chat-input-area button:hover {
+      background: #fd5f41;
+    }
     .footer {
       text-align: center;
-      padding: 20px;
-      background: #111;
-      color: #aaa;
-      margin-top: 40px;
+      padding: 20px 0 13px 0;
+      background: #fff;
+      color: #777;
+      font-size: 1.01rem;
+      margin-top: 0;
+      letter-spacing: .5px;
+      border-top: 1px solid #ececec;
+      box-shadow: 0 -1px 8px #d32f2f09;
+    }
+    @media (max-width:700px){
+      .header {padding:0 8px;}
+      .section {padding: 15px 4vw;}
+      .news-card img {height:110px;}
+      .lower-sections-wrapper {padding:0;}
+      .contrib-about-flex {padding:24px 0 0 0;}
+      .ai-help-btn {right: 10px;}
+      .ai-chat-modal {right: 10px;}
+    }
+    @media (max-width: 1000px) {
+      .contrib-about-flex {flex-direction:column;align-items:center;}
     }
   </style>
 </head>
 <body>
-
-  <!-- Redesigned Top Bar -->
-  <header>
-    <h1>Torasogh</h1>
+  <div class="header">
+    <div class="logo">Torasogh</div>
     <nav>
-      <a href="#news">News</a>
-      <a href="#ai">AI Help</a>
+      <a href="#news" class="active">News</a>
       <a href="#contributors">Contributors</a>
       <a href="#about">About</a>
     </nav>
-  </header>
-
-  <!-- Hero Section -->
-  <div class="hero">
-    <h2>Welcome to Torasogh</h2>
-    <p>Free tools, AI-powered help, automation support, and breaking tech news — all on one creative platform.</p>
   </div>
 
-  <!-- News Section (replaces Tools) -->
+  <div class="breaking">
+    Breaking: New AI tools launched! | Canva Pro access for all | Premium dev utilities now free!
+  </div>
+
+  <div class="hero">
+    <h1>Torasogh News</h1>
+    <p>Your trusted source for tech news, creative tools, and AI-powered updates — clean and distraction-free.</p>
+  </div>
+
   <section class="section" id="news">
-    <h2>📰 Latest Tech News</h2>
-    <div class="card-grid">
-      <div class="card">
-        <a href="news.html" class="card">
-  <img src="https://placehold.co/600x400/orange/000?text=News+2" alt="News 2">
-  <h3>Premium Tools Now Free</h3>
-  <p>Torasogh’s premium dev utilities are now available to all users.</p>
-</a>
-      </div>
-      <div class="card">
-        <a href="news.html" class="card">
-  <img src="https://placehold.co/600x400/orange/000?text=News+2" alt="News 2">
-  <h3>Premium Tools Now Free</h3>
-  <p>Torasogh’s premium dev utilities are now available to all users.</p>
-</a>
-      </div>
-      <div class="card">
-        <a href="news.html" class="card">
-  <img src="https://placehold.co/600x400/orange/000?text=News+2" alt="News 2">
-  <h3>Premium Tools Now Free</h3>
-  <p>Torasogh’s premium dev utilities are now available to all users.</p>
-</a>
-      </div>
+    <div class="section-title">📰 Latest Tech News</div>
+    <div class="news-grid">
+      <a href="news1.html" class="news-card">
+        <img src="Screenshot 2025-06-16 184140.png" alt="New AI Tools Released" />
+        <div class="news-card-content">
+          <div class="news-card-title">New AI Tools Released</div>
+          <div class="news-card-desc">Our new AI tools help automate content and code generation effortlessly.</div>
+          <div class="news-card-date">June 16, 2025</div>
+        </div>
+      </a>
+      <a href="news2.html" class="news-card">
+        <img src="https://placehold.co/600x400/orange/000?text=News+2" alt="Premium Tools Now Free" />
+        <div class="news-card-content">
+          <div class="news-card-title">Premium Tools Now Free</div>
+          <div class="news-card-desc">Torasogh’s premium dev utilities are now available to all users.</div>
+          <div class="news-card-date">June 15, 2025</div>
+        </div>
+      </a>
+      <a href="news3.html" class="news-card">
+        <img src="https://placehold.co/600x400/orange/000?text=News+3" alt="Canva Pro Access Unlocked" />
+        <div class="news-card-content">
+          <div class="news-card-title">Canva Pro Access Unlocked</div>
+          <div class="news-card-desc">Explore unlimited design access and resources through our latest rollout.</div>
+          <div class="news-card-date">June 14, 2025</div>
+        </div>
+      </a>
     </div>
   </section>
 
-  <!-- AI Help Section -->
-  <section class="section" id="ai">
-    <h2>🤖 Need Help? Use Torasogh AI</h2>
-    <p style="text-align:center; color:#ccc;">Our AI Assistant can guide you through coding, setup, tech support, and more — built directly into this platform.</p>
-    <div class="card-grid">
-      <div class="card">
-        <h3 style="padding: 20px;">💬 Chat with AI</h3>
-        <p style="padding: 0 20px 20px;">Use Torasogh's built-in assistant for real-time help and smart suggestions.</p>
-      </div>
-      <div class="card">
-        <h3 style="padding: 20px;">📖 Learn How It Works</h3>
-        <p style="padding: 0 20px 20px;">Get guides and examples to make the most of your tools with automation.</p>
-      </div>
+  <div class="lower-sections-wrapper">
+    <div class="contrib-about-flex">
+      <!-- Contributors Card -->
+      <section class="contributors-modern" id="contributors">
+        <div class="section-title">👥 Contributors</div>
+        <div class="contrib-list-modern">
+          <div class="contributor-card">
+            <div class="contributor-avatar" style="background:#ffe5e5;">TN</div>
+            <div class="contributor-info">
+              <h4>Taha N.</h4>
+              <p>Founder & CEO<br><span style="color:#d32f2f;font-weight:600;">Tech visionary</span>, architect of Torasogh's innovation roadmap.</p>
+            </div>
+          </div>
+          <div class="contributor-card">
+            <div class="contributor-avatar" style="background:#e0f7fa;">AI</div>
+            <div class="contributor-info">
+              <h4>AI Systems Team</h4>
+              <p>Designing the backbone of all <span style="color:#1976d2;font-weight:600;">intelligent assistance</span> across Torasogh services.</p>
+            </div>
+          </div>
+          <div class="contributor-card">
+            <div class="contributor-avatar" style="background:#ffe082;">UX</div>
+            <div class="contributor-info">
+              <h4>Frontend & UX Creators</h4>
+              <p>Shaping the look and feel for a <span style="color:#ffa000;font-weight:600;">premium user experience</span>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- About Card -->
+      <section class="about-modern" id="about">
+        <div class="section-title">🌟 About Torasogh</div>
+        <p>
+          <span style="font-weight:600;">Torasogh</span> is a future-ready platform offering productivity tools, developer automation, and secure access to premium software experiences.<br>
+          Built to empower creators, engineers, and dreamers everywhere.
+        </p>
+        <ul style="padding-left:20px; color:#666; margin-top:5px; margin-bottom:15px;">
+          <li>Daily breaking tech news</li>
+          <li>Innovative automation & AI tools</li>
+          <li>Passionate, diverse community</li>
+        </ul>
+        <p>
+          We combine <span style="color:#d32f2f;font-weight:600;">news</span>, <span style="color:#1976d2;font-weight:600;">advanced technology</span>, and our <span style="color:#ffa000;font-weight:600;">community</span> to shape tomorrow.<br>
+          <span style="color:#444;">Join us to stay ahead, share, and build the future!</span>
+        </p>
+      </section>
     </div>
-  </section>
-
-  <!-- Contributors Section -->
-  <section class="section" id="contributors">
-    <h2>👥 Contributors</h2>
-    <div class="contrib-card">
-      <h4>Taha N.</h4>
-      <p>Founder & CEO – Tech visionary, architect of Torasogh's innovation roadmap.</p>
-    </div>
-    <div class="contrib-card">
-      <h4>AI Systems Team</h4>
-      <p>Designing the backbone of all intelligent assistance across Torasogh services.</p>
-    </div>
-    <div class="contrib-card">
-      <h4>Frontend & UX Creators</h4>
-      <p>Shaping the look and feel of Torasogh to deliver a premium user experience.</p>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section class="section" id="about">
-    <h2>🌟 About Torasogh</h2>
-    <p style="text-align:center; max-width:700px; margin:auto; color:#ccc;">
-      Torasogh is a future-ready platform offering productivity tools, developer automation, and secure access to premium software experiences. Built to empower creators, engineers, and dreamers everywhere.
-    </p>
-  </section>
+  </div>
 
   <div class="footer">
-    &copy; 2025 Torasogh — Made for the builders of tomorrow.
+    &copy; 2025 Torasogh — News for the builders of tomorrow.
   </div>
 
+  <!-- Floating AI Help Button -->
+  <button class="ai-help-btn" id="aiHelpBtn" aria-label="Open AI Help">
+    <svg viewBox="0 0 24 24" fill="none">
+      <circle cx="12" cy="12" r="10" fill="currentColor" opacity="0.15"/>
+      <path d="M12 17v-1m0-8a3.5 3.5 0 0 0-2 6.32V15a2 2 0 1 0 4 0v-1.68A3.5 3.5 0 0 0 12 8z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+  <!-- AI Chat Modal -->
+  <div class="ai-chat-modal" id="aiChatModal">
+    <div class="ai-chat-header">
+      <span>Ask Torasogh AI</span>
+      <button class="close-btn" id="closeAiChat" title="Close">&times;</button>
+    </div>
+    <div class="ai-chat-body">
+      <div style="color:#d32f2f; font-weight:bold;">Hi! 👋 How can I help you today?</div>
+      <div style="margin-top:7px;color:#888;font-size:.95em;">(This is a demo placeholder. Connect your AI backend for real chat.)</div>
+    </div>
+    <form class="ai-chat-input-area" onsubmit="event.preventDefault();">
+      <input type="text" placeholder="Type your question..." id="aiChatInput" />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+  <script>
+    // Floating AI Help Button logic
+    const aiBtn = document.getElementById('aiHelpBtn');
+    const aiModal = document.getElementById('aiChatModal');
+    const aiModalClose = document.getElementById('closeAiChat');
+    aiBtn.onclick = () => { aiModal.classList.add('open'); };
+    aiModalClose.onclick = () => { aiModal.classList.remove('open'); };
+    window.addEventListener('click', function(e){
+      if(e.target === aiModal) aiModal.classList.remove('open');
+    });
+    window.addEventListener('keydown', function(e){
+      if(e.key === "Escape") aiModal.classList.remove('open');
+    });
+  </script>
 </body>
 </html>
